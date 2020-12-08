@@ -31,7 +31,7 @@ INSERT INTO Payment VALUES (10, 6, 354654213547, '6/1/21', 548, 'Lawrence', 'Fis
 INSERT INTO Payment VALUES (11, 3, 523145664654, '5/1/22', 564, 'Marina', 'Jones');
 INSERT INTO Payment VALUES (12, 5, 854621325454, '8/1/22', 941, 'Lauri', 'Evans');
 INSERT INTO Payment VALUES (13, 2, 124538174639, '1/1/21', 468, 'Steve', 'Polish');
-INSERT INTO Payment VALUES (14, 4, 786542421221, '1/1/21', 654, 'Maya', 'Stevens');
+INSERT INTO Payment VALUES (14, 4, 786542421221, '1/1/21', 654, 'Maya', 'Stevens'); 
 INSERT INTO Payment VALUES (15, 4, 786542421221, '1/1/21', 654, 'Maya', 'Stevens');
 INSERT INTO Payment VALUES (16, 7, 654548564121, '6/1/22', 768, 'Samuel', 'Absolm');
 INSERT INTO Payment VALUES (17, 5, 854621325454, '8/1/22', 941, 'Lauri', 'Evans');
