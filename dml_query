@@ -3,7 +3,7 @@
 --------------------------------------------------------------------------------
 
 SELECT P.Product_Name, O.Order_Price 
-FROM Order AS O, Product AS P 
+FROM Order AS O, Product AS P  
 WHERE O.Product_FK = P.Product_ID;
 
 --------------------------------------------------------------------------------
