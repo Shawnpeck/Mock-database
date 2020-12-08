@@ -1,0 +1,60 @@
+--------------------------------------------------------------------------------
+--DML Query 1
+--------------------------------------------------------------------------------
+
+SELECT P.Product_Name, O.Order_Price 
+FROM Order AS O, Product AS P 
+WHERE O.Product_FK = P.Product_ID;
+
+--------------------------------------------------------------------------------
+--DML Query 2
+--------------------------------------------------------------------------------
+
+SELECT * 
+FROM Order AS O, Product AS P 
+WHERE O.Product_FK = P.Product_ID
+AND P.Product_Name = '12 Classes Prepaid';
+
+
+--------------------------------------------------------------------------------
+--DML Query 3
+--------------------------------------------------------------------------------
+
+SELECT C.Class_Name, S.Class_Date, I.I_Last_Name
+FROM Class AS C, Schedule AS S, Instructor AS I
+WHERE C.Class_ID = S.Class_FK
+AND I.Instructor_ID = S.Instructor_FK;
+
+--------------------------------------------------------------------------------
+--DML Query 4
+--------------------------------------------------------------------------------
+
+SELECT C.Class_Name, S.Class_Date, I.I_Last_Name
+FROM Class AS C, Schedule AS S, Instructor AS I
+WHERE C.Class_ID = S.Class_FK
+AND I.Instructor_ID = S.Instructor_FK
+AND C.Class_Name = 'Yoga All Levels'
+AND S.Instructor_FK = 3;
+
+
+--------------------------------------------------------------------------------
+--DML Query 5
+--------------------------------------------------------------------------------
+
+SELECT P.Product_Name, S.S_First_Name, S.S_Last_Name, SUM(O.Order_Price) AS Total_Price
+FROM Product AS P, Student AS S, Order AS O, Payment AS Pa 
+WHERE P.Product_ID = O.Product_FK
+AND S.Student_ID = Pa.Student_FK
+AND O.Payment_FK = Pa.Payment_ID
+GROUP BY P.Product_Name, S.S_First_Name, S.S_Last_Name;
+
+--------------------------------------------------------------------------------
+--DML Query 6
+--------------------------------------------------------------------------------
+
+SELECT C.Class_Name, I.I_Last_Name, AVG(S.Attendance) AS AVG_Attendance
+FROM Class AS C, Instructor AS I
+WHERE C.Class_ID = S.Class_FK
+AND I.Instructor_ID = S.Instructor_FK
+GROUP BY C.Class_Name, I.I_Last_Name
+HAVING AVG_Attendance > 25;
