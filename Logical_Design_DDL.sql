@@ -27,7 +27,7 @@ CREATE TABLE Payment (
 	Exp_Date DATE NOT NULL,
 	CVV INTEGER NOT NULL,
 	Cardholder_First_Name CHAR NOT NULL,
-	Cardholder_Last_Name CHAR NOT NULL
+	Cardholder_Last_Name CHAR NOT NULL 
 );
 
 
