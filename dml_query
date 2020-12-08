@@ -30,7 +30,7 @@ AND I.Instructor_ID = S.Instructor_FK;
 --------------------------------------------------------------------------------
 
 SELECT C.Class_Name, S.Class_Date, I.I_Last_Name
-FROM Class AS C, Schedule AS S, Instructor AS I
+FROM Class AS C, Schedule AS S, Instructor AS I 
 WHERE C.Class_ID = S.Class_FK
 AND I.Instructor_ID = S.Instructor_FK
 AND C.Class_Name = 'Yoga All Levels'
